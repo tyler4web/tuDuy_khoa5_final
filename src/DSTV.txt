@@ -1,0 +1,10 @@
+Chuối # 1992 # TPHCM # 09234 # 1 # 10 # 9 # false
+Mận # 1998 # Phu Quoc # 09334 # 4 # 4 # 4 # false
+Hoa # 1994 # Da Nang # 09834 # 5 # 5 # 5 # false
+Lan # 1992 # Ben Tre # 09834 # 6 # 2 # 3 # false
+Hương # 1993 # Ha Tinh # 09834 # 7 # 7 # 7 # false
+Vịt # 1990 # Hoi An # 09834 # 8 # 2 # 3 # false
+Gà # 1995 # Thai Binh # 09834 # 9 # 9 # 9 # false
+Bưởi # 1990 # Ha Noi # 09134 # 1 # 2005 # true
+Xoài # 1993 # Nha Trang # 09134 # 1 # 2010 # true
+Heo # 1994 # Quang Ninh # 09834 # 2 # 2005 # true
