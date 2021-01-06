@@ -3,6 +3,7 @@ package khoa5_quanLyTruongHoc_BuiQuocTrieu;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Scanner;
 
 /*
  * Mục đích: Toa lop truong hoc quan ly cac nghiep vu lien quan
@@ -33,12 +34,13 @@ public class TruongHoc {
 	// 3. CONSTRUCTORS
 
 	public TruongHoc() {
+		this.objDSThanhVien = new DanhSachThanhVien();
 		dsGiaoVien = new ArrayList<GiaoVien>();
 		dsHocSinh = new ArrayList<HocSinh>();
 	}
 
 	// 4. INPUT, OUTPUT METHODS
-
+	
 	public void xuat() {
 
 	}
@@ -192,11 +194,11 @@ public class TruongHoc {
 		j = right;
 		do {
 			// phan hoach
-			while (listHsSapXep.get(i).getDiemTB()  < x) {
+			while (listHsSapXep.get(i).getDiemTB()  > x) {
 				// chay nua ben trai
 				i++;
 			}
-			while (x>listHsSapXep.get(j).getDiemTB()) {
+			while (listHsSapXep.get(j).getDiemTB()<x) {
 				//chay nua ben phai
 				j--;
 			}
@@ -218,6 +220,21 @@ public class TruongHoc {
 		// de qui cac doan ben phai
 //		return listHsSapXep;
 
+	}
+	
+	public static void bubbleSort_tenHS(ArrayList<HocSinh> listHsXuLy) {
+		int i;
+		int j;
+		for (i = 0; i < listHsXuLy.size() - 1; i++) {
+			for (j = listHsXuLy.size() - 1; j > i; j--) {
+				String tenHSI = listHsXuLy.get(i).getHoTen();
+				String tenHSJ = listHsXuLy.get(j).getHoTen();
+				if (tenHSI.compareToIgnoreCase(tenHSJ) >0) {// So sanh nghich the khong
+					// thay doi hoan vi (doi cho cho nhau)
+					Collections.swap(listHsXuLy, i, j);
+				}
+			}
+		}
 	}
 	
 	

@@ -45,7 +45,7 @@ public class DanhSachThanhVien implements NhapXuat {
 		System.out.println("Vui lòng chọn theo menu:");
 		System.out.println("1. Nhập thông tin Giáo Viên");
 		System.out.println("2. Nhập thông tin Học Sinh");
-		System.out.println("0. Thoát");
+		System.out.println("0. Thoát va xuat thong tin");
 	}
 
 	public void nhap(Scanner scan) {
@@ -69,6 +69,10 @@ public class DanhSachThanhVien implements NhapXuat {
 				tv.nhap(scan);
 				this.them(tv);
 				break;
+			case 3:
+//				th.init();
+				xuat();				
+				break;
 			default:
 				System.out.println("Vui lòng nhập từ 0 - 2");
 			}
@@ -86,20 +90,18 @@ public class DanhSachThanhVien implements NhapXuat {
 	}
 
 	// 5. BUSINESS METHODS
-	
 
-	
 	public void tinhThamNien() {
-		for(ThanhVien tv: this.listThanhVien) {
-			if( tv instanceof GiaoVien) {
+		for (ThanhVien tv : this.listThanhVien) {
+			if (tv instanceof GiaoVien) {
 				((GiaoVien) tv).tinhThamNien();
 			}
 		}
 	}
-	
+
 	public void tinhDTB() {
-		for(ThanhVien tv: this.listThanhVien) {
-			if( tv instanceof HocSinh) {
+		for (ThanhVien tv : this.listThanhVien) {
+			if (tv instanceof HocSinh) {
 				((HocSinh) tv).tinhDiemTB();
 			}
 		}
@@ -129,8 +131,7 @@ public class DanhSachThanhVien implements NhapXuat {
 				tv.setNamSinh(Integer.parseInt(listInfo[1]));
 				tv.setNoiSinh(listInfo[2]);
 				tv.setDiaChi(listInfo[3]);
-				
-				
+
 				// Thêm thanh vien vào list
 				this.listThanhVien.add(tv);
 			}

@@ -75,7 +75,7 @@ public class GiaoVien extends ThanhVien {
 			System.out.print("Nhập Chuyen Mon : ");
 			System.out.println("Vui long chon 1. tu nhien hoac 2. xa hoi:");
 			this.chuyenMon = Integer.parseInt(scan.nextLine());
-			if (chuyenMon != 1 && chuyenMon != 2) {
+			if (chuyenMon != 1 || chuyenMon != 2) {
 				stop = false;
 			}
 		} while (stop);
